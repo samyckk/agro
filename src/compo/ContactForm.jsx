@@ -186,7 +186,7 @@ const ContactForm = () => {
               id="phone"
               name="phone"
               required
-              className="flex-1 px-4 py-3 text-black bg-white border border-[#E7F3EF] rounded-r-lg focus:ring-2 focus:ring-[#93C572] focus:border-transparent transition duration-200 focus:outline-none"
+              className="flex-1 px-4 py-2 ml-1 text-black bg-white border border-[#E7F3EF] rounded-r-lg focus:ring-2 focus:ring-[#93C572] focus:border-transparent transition duration-200 focus:outline-none"
               placeholder="Phone Number"
               value={formData.phone}
               onChange={handlePhoneChange}
