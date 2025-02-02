@@ -9,10 +9,9 @@ const Footer = () => {
   ];
 
   const products = [
+    { name: 'All Products', path: '/products' },
     { name: 'Chickpea Products', path: '/products#chickpea' },
-    { name: 'Grains', path: '/products#grains' },
-    { name: 'Spices', path: '/products#spices' },
-    { name: 'Dal Products', path: '/products#dal' }
+    { name: 'Grains or Spices', path: '/products#grains-spices' },
   ];
 
   const contactInfo = [

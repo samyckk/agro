@@ -114,7 +114,7 @@ const Navbar = () => {
               { path: "/about", label: "About" },
               { path: "/contact", label: "Contact" },
               { path: "/products", label: "Products" },
-              { path: "/faq", label: "FAQ" }
+              // { path: "/faq", label: "FAQ" }
             ].map((item) => (
               <Link
                 key={item.path}
