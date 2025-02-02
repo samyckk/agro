@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 
@@ -11,6 +12,13 @@ const StatCard = ({ number, label }) => (
 );
 
 const About = () => {
+  useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }, [])
   const stats = [
     { number: "20+", label: "Years Experience" },
     { number: "1000+", label: "Global Clients" },

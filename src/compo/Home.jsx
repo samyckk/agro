@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom"
 import InfiniteCarousel from "./InfiniteCarousel";
 import ContactForm from "./ContactForm";
+import { useEffect } from "react";
 
 const ProductCategory = ({ imagesrc, title, description, products, link }) => (
   <div className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
@@ -36,6 +37,13 @@ const ProductCategory = ({ imagesrc, title, description, products, link }) => (
 );
 
 const Home = () => {
+  useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }, [])
   const categories = [
     {
       imagesrc: "https://media.istockphoto.com/id/647289202/photo/chickpeas-in-a-bowl.jpg?s=612x612&w=0&k=20&c=e9rOBg3IqTBqaVAIoFwQs_hgPR8FNkdXXEj6Um4Q6ww=",
