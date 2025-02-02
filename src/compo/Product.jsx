@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const ProductCard = ({ name, category, description, image, specifications }) => (
   <div className="bg-[#E7F3EF] rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
@@ -32,9 +32,11 @@ const ProductCard = ({ name, category, description, image, specifications }) => 
       </div>
       <div className="flex items-center justify-between">
         <span className="text-2xl font-bold text-[#4F9153]"></span>
+        <Link to="/contact">
         <button className="bg-gradient-to-r cursor-pointer from-[#93C572] to-[#4F9153] text-white px-6 py-3 rounded-lg hover:shadow-lg transform hover:-translate-y-0.5 transition duration-300">
           Request Quote
         </button>
+        </Link>
       </div>
     </div>
   </div>
@@ -161,27 +163,29 @@ const Products = () => {
 
       {/* Filters Section */}
       <div className="sticky top-0 bg-white/80 backdrop-blur-md shadow-md z-10">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="flex overflow-x-auto gap-3 pb-2 md:pb-0 w-full md:w-auto">
-              {categories.map(category => (
-                <button
-                  key={category.id}
-                  onClick={() => setActiveCategory(category.id)}
-                  className={`px-6 cursor-pointer py-3 rounded-xl whitespace-nowrap transition-all duration-300 ${
-                    activeCategory === category.id
-                      ? 'bg-gradient-to-r from-[#93C572] to-[#4F9153] text-white shadow-md'
-                      : 'bg-white text-[#5C8374] hover:bg-[#E7F3EF]'
-                  }`}
-                >
-                  <span className="text-lg flex flex-row"> {category.name}</span>
-                </button>
-              ))}
-            </div>
-
-          </div>
+  <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6">
+    <div className="py-2 sm:py-3">
+      <div className="flex items-center justify-start overflow-x-auto scrollbar-hide">
+        <div className="flex gap-2 sm:gap-3 pb-1 sm:pb-0 min-w-0">
+          {categories.map(category => (
+            <button
+              key={category.id}
+              onClick={() => setActiveCategory(category.id)}
+              className={`px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 rounded-lg text-sm sm:text-base whitespace-nowrap transition-all duration-300 
+                ${
+                  activeCategory === category.id
+                    ? 'bg-gradient-to-r from-[#93C572] to-[#4F9153] text-white shadow-sm'
+                    : 'bg-white text-[#5C8374] hover:bg-[#E7F3EF] hover:shadow-sm'
+                }`}
+            >
+              <span className="flex items-center"> {category.name}</span>
+            </button>
+          ))}
         </div>
       </div>
+    </div>
+  </div>
+</div>
 
       {/* Products Grid */}
       <div className="container mx-auto px-4 py-16">
