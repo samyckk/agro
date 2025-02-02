@@ -1,8 +1,14 @@
+import { useEffect } from "react";
 import ContactForm from "./ContactForm";
 
-
-
 const Contact = () => {
+  useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }, [])
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
