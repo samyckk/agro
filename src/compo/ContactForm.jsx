@@ -38,6 +38,10 @@ const ContactForm = () => {
     window.open(whatsappURL, '_blank');
   };
 
+  const handlewp = async (e)=>{
+    e.preventDefault();
+    redirectToWhatsApp();
+  }
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus({ loading: true, error: null, success: false });
@@ -58,7 +62,6 @@ const ContactForm = () => {
       );
 
       setStatus({ loading: false, error: null, success: true });
-      redirectToWhatsApp();
 
       setTimeout(() => {
         setFormData({ name: '', email: '', countryCode: '+91', phone: '', message: '' });
@@ -103,7 +106,7 @@ const ContactForm = () => {
     <div className="space-y-6">
       {status.success && (
         <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
-          Message sent successfully! Redirecting to WhatsApp...
+          Message sent successfully!
         </div>
       )}
       
@@ -221,6 +224,13 @@ const ContactForm = () => {
         >
           {status.loading ? 'Sending...' : 'Send Message'}
         </button>
+
+        <button
+        onClick={handlewp}
+  className="w-full cursor-pointer bg-[#25D366] text-white px-8 py-4 rounded-lg hover:shadow-xl transform hover:-translate-y-1 transition duration-300 text-lg font-medium"
+>
+  Connect with WhatsApp
+</button>
       </form>
     </div>
   );
