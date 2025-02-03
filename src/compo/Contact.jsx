@@ -51,14 +51,14 @@ const Contact = () => {
                     <h3 className="font-semibold text-[#4F9153] mb-2">Phone</h3>
                     <p className="text-[#5C8374]">+91 91663 31604</p>
                   </div>
-                  <div>
+                  {/* <div>
                     <h3 className="font-semibold text-[#4F9153] mb-2">Business Hours</h3>
                     <p className="text-[#5C8374]">
                       Monday - Friday: 9:00 AM - 6:00 PM<br />
                       Saturday: 10:00 AM - 4:00 PM<br />
                       Sunday: Closed
                     </p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 

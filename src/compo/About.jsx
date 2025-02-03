@@ -84,7 +84,7 @@ Our relationship with our vendor exists and is cultivated with a belief system o
       </div>
 
       {/* Stats Section */}
-      <div className="bg-[#E7F3EF]/30 py-16">
+      {/* <div className="bg-[#E7F3EF]/30 py-16">
         <h1 className=" mx-auto text-center text-3xl md:text-4xl font-bold text-[#4F9153] mb-6">Milestones</h1>
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
@@ -93,7 +93,7 @@ Our relationship with our vendor exists and is cultivated with a belief system o
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Values Section */}
       <div className="py-16 md:py-24">
