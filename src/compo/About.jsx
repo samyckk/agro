@@ -4,12 +4,12 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 
-const StatCard = ({ number, label }) => (
-  <div className="bg-white p-8 rounded-xl shadow-lg text-center transform hover:-translate-y-1 transition duration-300">
-    <div className="text-4xl font-bold text-[#4F9153] mb-2">{number}</div>
-    <div className="text-[#5C8374]">{label}</div>
-  </div>
-);
+// const StatCard = ({ number, label }) => (
+//   <div className="bg-white p-8 rounded-xl shadow-lg text-center transform hover:-translate-y-1 transition duration-300">
+//     <div className="text-4xl font-bold text-[#4F9153] mb-2">{number}</div>
+//     <div className="text-[#5C8374]">{label}</div>
+//   </div>
+// );
 
 const About = () => {
   useEffect(() => {
@@ -19,12 +19,12 @@ const About = () => {
       behavior: 'smooth'
     });
   }, [])
-  const stats = [
-    { number: "20+", label: "Years Experience" },
-    { number: "1000+", label: "Global Clients" },
-    { number: "50+", label: "Products" },
-    { number: "10+", label: "Countries Served" }
-  ];
+  // const stats = [
+  //   { number: "20+", label: "Years Experience" },
+  //   { number: "1000+", label: "Global Clients" },
+  //   { number: "50+", label: "Products" },
+  //   { number: "10+", label: "Countries Served" }
+  // ];
 
 
   return (
@@ -37,7 +37,7 @@ const About = () => {
               Our Story
             </h1>
             <p className="text-lg text-[#5C8374] leading-relaxed">
-              Since XXXX, we&apos;ve been dedicated to delivering premium agricultural products 
+              We&apos;ve been dedicated to delivering premium agricultural products 
               while supporting sustainable farming practices and empowering local communities.
             </p>
           </div>
